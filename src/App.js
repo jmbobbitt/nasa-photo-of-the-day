@@ -6,6 +6,17 @@ import Explanation from './components/Explanation'
 import Date from './components/Date'
 import axios from 'axios'
 import "./App.css";
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  color: ${props => props.theme.primaryColor};
+  border: ${props => props.theme.border};
+  margin: 30px;
+  padding: 20px;
+`
+
+
+
 
 function App() {
   const [photo, setPhoto] = useState({})
@@ -20,14 +31,14 @@ function App() {
 
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <Header/>
       <Title title={photo.title}/>
       <Date date={photo.date}/>
       <Photo url={photo.url}/> 
       <Explanation explanation={photo.explanation}/>
 
-    </div>
+    </StyledApp>
   );
 }
 
