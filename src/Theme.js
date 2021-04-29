@@ -3,5 +3,5 @@ export default {
     secondaryColor: 'slategray',
     silver: 'silver',
     breakpointMobile: '(max-width: 550px)',
-    border: '3px solid gray',
+    border: '3px solid black',
    }
